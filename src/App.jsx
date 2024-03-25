@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import axios from "axios";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import Brunchs from "./components/Brunchs";
 
-function App() {
+const App = () => {
   const [data, setData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
 
@@ -22,8 +25,19 @@ function App() {
   return isLoading ? (
     <span>En cours de chargement... </span>
   ) : (
-    <h2>{data.restaurant.name}</h2>
+    <>
+      <Header data={data} />
+      <div className="content">
+        <div className="container">
+          <div className="menu">
+            <Brunchs data={data} />
+          </div>
+          <div className="panier"></div>
+        </div>
+      </div>
+      <Footer />
+    </>
   );
-}
+};
 
 export default App;
