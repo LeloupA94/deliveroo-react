@@ -181,9 +181,14 @@ h3 {
   padding: 1rem;
   width: 300px;
   height: 60px;
-  background: #bac3c3;
+  background: #00ccbc;
   border-radius: 5px;
   border: none;
+  color: #ffffff;
+}
+.paiement:hover {
+  background: #00b9a9;
+  cursor: pointer;
 }
 
 .panier {

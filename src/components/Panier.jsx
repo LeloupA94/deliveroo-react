@@ -3,7 +3,7 @@ const Panier = () => {
     <>
       <div className="cardPanier">
         <div className="panier">
-          <button className="paiement">Valider panier</button>
+          <button className="paiement">Valider mon panier</button>
           <div className="paniervide">Votre panier est vide</div>
         </div>
       </div>
