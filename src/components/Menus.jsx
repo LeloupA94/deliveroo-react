@@ -9,15 +9,16 @@ const Menus = ({ data }) => {
         <div className="categorie" key={index}>
           <h2>{category.name}</h2>
           <div className="platligne">
-            {category.meals.map((meal, mealIndex) => (
-              <div className="plats" key={mealIndex}>
+            {category.meals.map((meal, id) => (
+              <div className="plats" key={id}>
                 <div className="platsCard">
                   <h3>{meal.title}</h3>
-                  <p>{meal.description}</p>
+
                   <div className="infosplats">
+                    <p>{meal.description}</p>
                     <span className="prixplat">{meal.price} €</span>
                     <span className={meal.popular ? "pop" : "hidden"}>
-                      ⭐ Populaire
+                      <i className="fa-solid fa-star"> Populaire</i>
                     </span>
                   </div>
                   {meal.picture && (
