@@ -2,10 +2,10 @@ import Logo from "../assets/img/logo-teal.svg";
 const Header = ({ data }) => {
   return (
     <header className="header">
-      <div>
+      <div className="line">
         <div className="container">
           <div className="logo">
-            <img src={Logo} />
+            <img alt="le logo" src={Logo} />
           </div>
         </div>
       </div>
@@ -21,7 +21,11 @@ const Header = ({ data }) => {
                 l’agriculture biologique.
               </p>
             </div>
-            <img className="restoinfos-image" src={data.restaurant.picture} />
+            <img
+              alt="les photo"
+              className="restoinfos-image"
+              src={data.restaurant.picture}
+            />
           </div>
         </div>
       </div>

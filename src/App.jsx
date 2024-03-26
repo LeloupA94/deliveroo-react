@@ -3,7 +3,8 @@ import "./App.css";
 import axios from "axios";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-import Brunchs from "./components/Brunchs";
+import Menus from "./components/Menus";
+import Panier from "./components/Panier";
 
 const App = () => {
   const [data, setData] = useState({});
@@ -30,9 +31,9 @@ const App = () => {
       <div className="content">
         <div className="container">
           <div className="menu">
-            <Brunchs data={data} />
+            <Menus data={data} />
           </div>
-          <div className="panier"></div>
+          <Panier />
         </div>
       </div>
       <Footer />
